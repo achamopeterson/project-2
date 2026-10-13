@@ -63,6 +63,8 @@ Sources:
 https://www.w3schools.com/html/html_classes.asp
 https://www.w3schools.com/html/html_css.asp
 AP
+I also used inline block to place the two profile box
+next to each other 
 */
 
 .profile {
@@ -70,4 +72,7 @@ AP
     border: 2px solid #1f3c5b;
     padding: 20px;
     margin: 15px;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
 }
