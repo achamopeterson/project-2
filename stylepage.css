@@ -101,15 +101,23 @@ next to each other
     min-width:0;
 }
 
-/* AO: Style the group photos */
+/* AO: Center both group members' names */
+.profile h3 {
+    text-align: center;
+}
+
+/* AO: Center the group photos */
 .profile img {
     width:180px;
-    border-radius: 8px;
+    max-width:100%;
+    height: auto;
+    border-radius:8px;
     display: block;
+    margin:0 auto;
 }
 
 /* AO: Stack profiles on smaller screens */
-@media (max-width: 650px) {
+@media (max-width:650px) {
     .profile-container {
         flex-direction: column;
     }
@@ -175,3 +183,12 @@ next to each other
     object-fit: cover;
 }
 
+/* AO: Make the homepage image larger and centered */
+.home-image {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
