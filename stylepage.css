@@ -52,3 +52,22 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/*
+added the profile class to give both group members
+the same background colorand is just more clear
+W3Schools HTML Classes and CSS lessons to understand how to
+style the div containers.
+
+Sources:
+https://www.w3schools.com/html/html_classes.asp
+https://www.w3schools.com/html/html_css.asp
+AP
+*/
+
+.profile {
+    background-color: #eaf0f6;
+    border: 2px solid #1f3c5b;
+    padding: 20px;
+    margin: 15px;
+}
