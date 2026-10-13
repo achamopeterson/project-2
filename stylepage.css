@@ -186,11 +186,11 @@ next to each other
 /* AO: Make the homepage image larger and centered */
 .home-image {
     display: block;
-    width: 80%;
-    max-width: 700px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;
+    width:80%;
+    max-width:700px;
+    height:auto;
+    margin:20px auto;
+    border-radius:10px;
 }
 /* AP   I styled the resource cards to match our website */
 .resource-card {
@@ -199,4 +199,14 @@ next to each other
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+/* AO: Center the intersectionality image */
+.resource-image {
+    display:block;
+    width:80%;
+    max-width:650px;
+    height:auto;
+    margin:20px auto;
+    border-radius:10px;
 }
