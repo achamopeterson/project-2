@@ -192,3 +192,11 @@ next to each other
     margin: 20px auto;
     border-radius: 10px;
 }
+/* AP   I styled the resource cards to match our website */
+.resource-card {
+    background-color: #eaf0f6;
+    border: 2px solid #1f3c5b;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
