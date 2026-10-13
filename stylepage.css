@@ -67,12 +67,30 @@ I also used inline block to place the two profile box
 next to each other 
 */
 
-.profile {
-    background-color: #eaf0f6;
-    border: 2px solid #1f3c5b;
-    padding: 20px;
-    margin: 15px;
-    display: inline-block;
-    width: 40%;
-    vertical-align: top;
+.profile-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
 }
+
+.profile {
+    background-color:#eaf0f6;
+    border:2px solid #1f3c5b;
+    border-radius:10px;
+    padding:20px;
+    flex:1;
+    min-width:0;
+}
+
+.profile img {
+    width:180px;
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 650px) {
+    .profile-container {
+        flex-direction: column;
+    }
+}
+
