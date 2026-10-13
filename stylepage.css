@@ -179,7 +179,7 @@ next to each other
 /* AP - Makes both profile photos the same size without stretching them. */
 .profile img {
     width: 200px;
-    height: 200px;
+    height: 200px !important;
     object-fit: cover;
 }
 
