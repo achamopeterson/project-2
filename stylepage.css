@@ -151,3 +151,21 @@ next to each other
         flex-direction: column;
     }
 }    
+
+/* AO: Center the Tech Hero names and credits */
+.techhero-heading {
+    text-align: center;
+}
+
+/* AO: Make both Tech Hero photos the same size */
+.techhero-image {
+    display:block;
+    width:300px;
+    max-width:100%;
+    height:375px;
+    object-fit:cover;
+    object-position:center;
+    border-radius: 0px;
+    margin:20px auto;
+}
+
