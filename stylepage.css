@@ -168,4 +168,10 @@ next to each other
     border-radius: 0px;
     margin:20px auto;
 }
+/* AP - Makes both profile photos the same size without stretching them. */
+.profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
 
