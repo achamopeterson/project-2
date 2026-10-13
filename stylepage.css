@@ -97,3 +97,39 @@ next to each other
     }
 }
 
+/* AO: Style the homepage nagvigation cards */
+.home-sections {
+    margin-top:35px;
+}
+
+.home-cards {
+    display: flex;
+    gap:15px;
+}
+
+.home-card {
+    flex:1;
+    min-width:0;
+    background-color: #eaf0f6;
+    border:2px solid #1f3c5b;
+    border-radius:10px;
+    padding:15px;
+    text-decoration: none;
+    color: #222222;
+}
+
+.home-card h3 {
+    color: #1f3c5b;
+}
+
+.home-card:hover {
+    background-color: #d5e6f5;
+    border-color: #195ea8;
+}
+/* AO: Stack the cards on smaller screens */
+
+@media (max-width: 650px) {
+    .home-cards {
+        flex-direction: column;
+    }
+    
