@@ -66,13 +66,14 @@ AP
 I also used inline block to place the two profile box
 next to each other 
 */
-
+/* AO: Arrange our group profiles in two columns */
 .profile-container {
     display: flex;
     gap: 20px;
     align-items: stretch;
 }
 
+/* AO: Keep both profile cards consistent */
 .profile {
     background-color:#eaf0f6;
     border:2px solid #1f3c5b;
@@ -82,12 +83,14 @@ next to each other
     min-width:0;
 }
 
+/* AO: Style the group photos */
 .profile img {
     width:180px;
     border-radius: 8px;
     display: block;
 }
 
+/* AO: Stack profiles on smaller screens */
 @media (max-width: 650px) {
     .profile-container {
         flex-direction: column;
