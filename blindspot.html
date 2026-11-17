@@ -283,6 +283,46 @@
       </div>
 
     </section>
+ 
+<section id="results">
+  <h2>3. Our Test Results</h2>
+
+  <p>
+    We tested three objects that were not part of
+    our training categories. Here is what happened.
+  </p>
+
+  <h3>Test 1: Orange Ball</h3>
+  <img src="orange-ball.png" width="300"
+       alt="Orange ball classified as Phone">
+  <p>
+    The AI predicted Phone with 94% confidence.
+    Even though it was a ball, the AI still
+    classified it as a phone.
+  </p>
+
+      <h3>Test 2: Water Bottle</h3>
+      <img src="water-bottle.png" width="300"
+       alt="Water bottle classified as Cup/Glass">
+      <p>
+        The AI predicted Cup/Glass with 100% confidence.
+        The bottle was not one of our training categories, but the AI still gave a confident answer.
+      </p>
+
+      <h3>Test 3: Ceramic Bowl</h3>
+      <img src="bowl.png" width="300"
+       alt="Ceramic bowl classified as Phone">
+      <p>
+        The AI predicted Phone with 79% confidence.
+        We found this surprising because the bowl looks more like a cup than a phone.
+      </p>
+
+      <h3>What We Learned</h3>
+      <p>
+        Our AI always tries to choose between Cup/Glass and Phone, even when the object is neither.
+        This shows that a high confidence score does not always mean the AI is correct.
+      </p>
+    </section>
 
     <section id="about">
       <h2>3. About Our Project</h2>
@@ -290,7 +330,8 @@
       <h3>What We Did</h3>
 
       <p>
-        We used Google Teachable Machine to train our own AI model. We collected pictures of cups, glasses, and phones using our webcams.
+        We used Google Teachable Machine to train our own AI model. 
+        We collected pictures of cups, glasses, and phones using our webcams.
         Then we used those pictures to teach the AI how to recognize each category.
       </p>
 
@@ -336,13 +377,6 @@
            target="_blank">
           View our Teachable Machine model
         </a>
-      </p>
-
-      <h3>What's Next?</h3>
-
-      <p>
-        We will continue testing the model, record a demonstration video, and add our full project statement.
-        We will also share our code and available training pictures on GitHub.
       </p>
 
     </section>
