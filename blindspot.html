@@ -19,11 +19,11 @@
     }
 
     header {
-      background-color:#17324d;
-      color:white;
-      padding:35px 20px;
-      text-align:center;
-    }
+      background-color: #1f3c5b;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }  
 
     header h1 {
       font-size:42px;
@@ -35,20 +35,30 @@
     }
 
     nav {
-      background-color:#254d70;
-      padding:12px;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      background-color: #1f3c5b;
+      padding: 15px;
     }
 
     nav a {
       color: white;
-      margin: 0 12px;
       text-decoration: none;
-      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 6px;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a:focus-visible {
+      background-color: #365b80;
       text-decoration: underline;
+    }
+    nav a.active {
+      background-color: white;
+      color: #1f3c5b;
+      font-weight: bold;
     }
 
     main {
@@ -162,9 +172,10 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="#test">Test the AI</a>
-    <a href="#challenge">Challenges</a>
-    <a href="#about">Our Project</a>
+    <a href="about.html">About Us</a>
+    <a href="resources.html">Implicit Bias Resources</a>
+    <a href="techhero.html">Tech Heroes</a>
+    <a href="blindspot.html" class="active" aria-current="page">Project 3 - BLINDSPOT</a>
   </nav>
 
   <main>
