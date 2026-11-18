@@ -408,6 +408,88 @@
         </a>
       </p>
 
+      <h3>Project Statement: Can AI Recognize Objects with Perfect Accuracy?</h3>
+
+      <h4>Introduction</h4>
+
+      <p>
+        In our third project, we created our own AI model using Google Teachable Machine that can recognize some common objects. The purpose of our project was to learn more about machine learning algorithms and to see how our training data impacts the predictions of the algorithm. We decided to focus on two categories cups/glasses and phones. We chose these objects because they are common items that are easy to find and photograph. In addition, we wanted to make our project interactive and let people test our model and see if they could make it work incorrectly. The question that arose while creating this project was the following: Can AI recognize an object it is not trained to identify? It means that the question of how will our model react to an absolutely unfamiliar object appeared. Will it recognize it as a new object or will it try to classify it into one of the categories we have created?
+      </p>
+
+      <p>
+        Our project also connects to Joy Buolamwini's book <em>Unmasking AI</em>, which discusses how artificial intelligence can make mistakes because of the data and decisions involved in creating it. Through this assignment, we wanted to better understand how humans influence AI systems and why their predictions should not always be trusted.
+      </p>
+
+      <h4>Building and Training Our Model</h4>
+
+      <p>
+        Our project began with the use of Google Teachable Machine, where people can train machine learning models without the need to write complex code. In our case, we chose image classification since our goal was to classify objects with a webcam. Every participant in the group contributed to the project by bringing new unique images to the dataset. Images were collected via our webcams and put in one project. The images were sorted into two groups, one consisting of cups and glasses, and another with phones. These classes allowed the machine to see what kind of example it needed. As a result of working with the images, we learned that the machine cannot recognize objects like cups and phones. It learns through examples, therefore objects, background, angles, and lighting of our photos could affect predictions.
+      </p>
+
+      <p>
+        Once the images were combined, the model was trained via Teachable Machine. After the training process was complete, the model was tested using the preview on the webcam. Predictions for both categories, along with the confidence percentage of each category, could be observed from the model. The percentage reflected the biasness of the model towards each category. In addition to the testing process, we have made a website called "Can AI Recognize Everything?". This website contains an area where users can turn on their cameras and test the model. In addition to this, various challenges have been put forward which encourage the users to test the model under different conditions such as varied light conditions and backgrounds and also using items that the machine may not recognize.
+      </p>
+
+      <h4>Testing Our Model</h4>
+
+      <p>
+        Once we have trained our model, we decided to investigate how it would react to objects that did not fall into our two categories. We tested the model on three objects that did not fall under the categories used in training: an orange ball, a water bottle, and a ceramic bowl. In our first experiment, we used an orange ball. After showing the object to the webcam, our model predicted the object was a phone, which is correct only with 94% probability. It is interesting to note that an orange ball looks nothing like a phone. Although the answer is incorrect, the model gives us a high probability. The second object that we used in our tests was a plastic water bottle. Our model predicted that this object was a cup/glass with 100% accuracy. Such result can be considered logical because the water bottle is also a container meant for drinking. Nonetheless, it was not one of our training categories.
+      </p>
+
+      <p>
+        The third experiment consisted of testing the model on a ceramic bowl. According to its predictions, there was a possibility of the bowl being a phone with 79% confidence and a cup/glass with 21%. We were quite surprised by this result as the bowl is clearly closer to a cup than a phone. Nevertheless, the model preferred to categorize the bowl as a phone. As we can see from the results, the model does not recognize the objects the way people do. It compares what it sees with the images it has previously learned from our training set.
+      </p>
+
+      <p>
+        Probably the most important thing we should pay attention to here is the fact that the model tends to choose one out of the two classes created by us. Thus, the fact that we only used cups/glasses and phones in our training set means that the model has no category for unknown objects. We also learned that a high confidence percentage does not necessarily mean the prediction is correct. The orange ball received a 94% phone prediction, while the water bottle received a 100% cup/glass prediction. These results helped us understand that confidence scores need to be interpreted carefully.
+      </p>
+
+      <h4>Connection to Unmasking AI</h4>
+
+      <p>
+        Perhaps one of the biggest ties between our project and Unmasking AI is the concept that artificial intelligence is influenced by human decisions. For instance, according to Joy Buolamwini, it is possible for the development process to lead to the generation of unfair and incorrect results from AI systems through the types of data that they have been fed. In her book, she recounts how she has experienced first-hand the inability of facial detection technology in recognizing her face. In addition, she discovered that the systems work best on the lighter skin compared to darker skin. Through these experiences, she has helped to highlight how AI systems may exclude certain groups through lack of representation in the training data.
+      </p>
+
+      <p>
+        Although our project had nothing to do with the development of AI systems to detect people, we still learned something important regarding training data. We were the ones who chose what type of image data was going to be included in the project and in what categories. Since we only made two categories, the model could choose between those two categories. This allowed us to see that AI does not work independently of people's decisions. Although it is the computer that performs the categorization, the decisions made by people while constructing the system influence the outcomes.
+      </p>
+
+      <p>
+        Another important insight that I got from Unmasking AI is called "the coded gaze." It refers to the priorities, beliefs, and biases that the developers of the technology have, and how these elements are implemented in technology itself. This insight helped us understand how the choices made by people influence the final outcome of development on a small scale. We chose the objects for our model to recognize, and also selected the images that represent these objects. Our model learned from these choices rather than understanding all things it may come across. For instance, when our model came across an image of an orange ball, it did not perceive that the ball did not fit into any category it knew, and classified it as a phone.
+      </p>
+
+      <p>
+        Certainly, there are significant differences between the issues that Buolamwini discusses and our experiment. A misrecognition of a ball as a phone is not comparable to errors made by face recognition technologies that identify a person incorrectly. Nevertheless, this experiment has allowed us to figure out why the limitations of AI systems become very dangerous when they are applied in the sphere related to people's life. It should be noted that AI is actively used now in many spheres such as employment, security, and so on. Therefore, the consequences may be much more dangerous if the system makes wrong predictions and people believe them blindly.
+      </p>
+
+      <p>
+        The experience of Buolamwini suggests that developers of AI systems should take into account all groups of people that may be affected by their technology. There is no point to think that the system seems accurate after several trials. In addition, developers should find out what cases the system cannot deal with and why.
+      </p>
+
+      <h4>What We Learned</h4>
+
+      <p>
+        One of the most significant insights we gained from this project is that machine learning relies a lot on the examples given during training. Before conducting this experiment, one was likely to view AI as nothing more than pattern recognition and generation of correct outputs. However, after designing our model, we noticed that its capacity is much less than one would initially think. We learned that programming a machine is different from teaching it about an object in the way humans perceive them. While people are able to recognize that a ball is neither a phone nor a cup, our model did not possess this capacity since we did not provide any categories of objects outside those two.
+      </p>
+
+      <p>
+        Finally, the last thing we learned from this experiment is the importance of testing. Had we just limited ourselves to testing cups and phones, we would have assumed that our machine operates perfectly. From this, we have learned that testing of such models across various scenarios is necessary. The model will operate efficiently when conditions are the same as those in which it was built but may perform poorly when faced with unexpected changes. This way, flaws of the model can be identified before the technology gets widely used.
+      </p>
+
+      <p>
+        Our project taught us another thing as well – just how easily people tend to interpret the confidence percentage. When seeing the result of 100%, it is quite tempting to assume that the machine is perfectly sure and right about its prediction. However, our water bottle example proved that the model was capable of showing an extremely high confidence percentage even though the image did not fit any of the two classes. For the future development of our project, we would definitely take into account adding the third class for irrelevant objects. Thus, we would check if the model is able to detect irrelevant images and whether adding this new class improves its performance. Also, we could use additional training images.
+      </p>
+
+      <h4>Conclusion</h4>
+
+      <p>
+        Overall, this project gave us more knowledge about machine learning and the extent to which human intervention plays a role in AI predictions. With our own trained model with cups, glasses, and cellphones, we got insight on how a computer is trained to learn from examples and make predictions based on those examples. We learned that it is possible for AI to give predictions with confidence that may be wrong. Our tests revealed that the predictions of our models are constrained by the categories and examples that we provided.
+      </p>
+
+      <p>
+        The relevance of the project to Unmasking AI gave more significance to this assignment as it allowed us to know how such constraints can affect society when applied in real-life situations. As per the findings of Buolamwini, such constraints can result in an outcome that is biased towards certain groups. The most important lesson from this project is that we should not trust artificial intelligence just because it comes up with a solution with a very high confidence rate. We need to understand the training process of these systems, learn about their weaknesses, and test them further instead of thinking that everything they produce is right. The purpose of this assignment was to show us that AI is flawed and not completely autonomous. AI is the product of the creators' work and understanding this fact is crucial for the future development of AI.
+      </p>
+
     </section>
 
   </main>
@@ -532,3 +614,4 @@
 
 </body>
 </html>
+
