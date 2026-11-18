@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +24,7 @@
       color: white;
       padding: 25px;
       text-align: center;
-    }  
+    }
 
     header h1 {
       font-size:42px;
@@ -55,6 +56,7 @@
       background-color: #365b80;
       text-decoration: underline;
     }
+
     nav a.active {
       background-color: white;
       color: #1f3c5b;
@@ -184,7 +186,7 @@
       <h2>Can AI Recognize Everything?</h2>
 
       <p>
-        We trained an AI model to recognize cups, glasses, and phones. 
+        We trained an AI model to recognize cups, glasses, and phones.
         Now we want to see how well it works with objects it has never seen before.
       </p>
 
@@ -260,7 +262,8 @@
         <h3>Challenge 1: Different Lighting</h3>
 
         <p>
-          Show a cup in a bright room, then try it in a darker room. Does the AI still recognize it?
+          Show a cup in a bright room, then try it in a darker room.
+          Does the AI still recognize it?
         </p>
       </div>
 
@@ -268,7 +271,7 @@
         <h3>Challenge 2: Different Backgrounds</h3>
 
         <p>
-          Put the same object in front of a different background. 
+          Put the same object in front of a different background.
           Does the prediction change?
         </p>
       </div>
@@ -283,27 +286,29 @@
       </div>
 
     </section>
- 
-<section id="results">
-  <h2>3. Our Test Results</h2>
 
-  <p>
-    We tested three objects that were not part of
-    our training categories. Here is what happened.
-  </p>
+    <section id="results">
+      <h2>3. Our Test Results</h2>
 
-  <h3>Test 1: Orange Ball</h3>
-  <img src="orange-ball.png" width="300"
-       alt="Orange ball classified as Phone">
-  <p>
-    The AI predicted Phone with 94% confidence.
-    Even though it was a ball, the AI still
-    classified it as a phone.
-  </p>
+      <p>
+        We tested three objects that were not part of
+        our training categories. Here is what happened.
+      </p>
+
+      <h3>Test 1: Orange Ball</h3>
+      <img src="orange-ball.png" width="300"
+           alt="Orange ball classified as Phone">
+
+      <p>
+        The AI predicted Phone with 94% confidence.
+        Even though it was a ball, the AI still
+        classified it as a phone.
+      </p>
 
       <h3>Test 2: Water Bottle</h3>
       <img src="water-bottle.png" width="300"
-       alt="Water bottle classified as Cup/Glass">
+           alt="Water bottle classified as Cup/Glass">
+
       <p>
         The AI predicted Cup/Glass with 100% confidence.
         The bottle was not one of our training categories, but the AI still gave a confident answer.
@@ -311,26 +316,50 @@
 
       <h3>Test 3: Ceramic Bowl</h3>
       <img src="bowl.png" width="300"
-       alt="Ceramic bowl classified as Phone">
+           alt="Ceramic bowl classified as Phone">
+
       <p>
         The AI predicted Phone with 79% confidence.
         We found this surprising because the bowl looks more like a cup than a phone.
       </p>
 
       <h3>What We Learned</h3>
+
       <p>
         Our AI always tries to choose between Cup/Glass and Phone, even when the object is neither.
         This shows that a high confidence score does not always mean the AI is correct.
       </p>
     </section>
 
+    <section id="video">
+      <h2>4. AI Demonstration Video</h2>
+
+      <p>
+        Watch our demonstration of the AI model as we test different objects
+        and see how it classifies them.
+      </p>
+
+      <div class="center">
+        <iframe
+          width="560"
+          height="315"
+          style="max-width:100%; border:0;"
+          src="https://www.youtube.com/embed/Mf9ZKgRgOyk"
+          title="BLINDSPOT - AI Demonstration"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
     <section id="about">
-      <h2>3. About Our Project</h2>
+      <h2>5. About Our Project</h2>
 
       <h3>What We Did</h3>
 
       <p>
-        We used Google Teachable Machine to train our own AI model. 
+        We used Google Teachable Machine to train our own AI model.
         We collected pictures of cups, glasses, and phones using our webcams.
         Then we used those pictures to teach the AI how to recognize each category.
       </p>
@@ -345,7 +374,7 @@
       <h3>What We Noticed So Far</h3>
 
       <p>
-        When we tested an unrelated object, the AI still predicted either Cup/Glass or Phone. 
+        When we tested an unrelated object, the AI still predicted either Cup/Glass or Phone.
         This happens because we only trained it to choose between those two categories.
       </p>
 
@@ -366,7 +395,7 @@
       </p>
 
       <p>
-        Our model does not test racial or gender bias. 
+        Our model does not test racial or gender bias.
         But it shows why we should question AI predictions instead of assuming they are always correct.
       </p>
 
