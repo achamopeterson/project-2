@@ -368,85 +368,185 @@
           View our Teachable Machine model
         </a>
       </p>
-
-      <h3>Project Statement: Can AI Recognize Objects with Perfect Accuracy?</h3>
+      <!-- Final revised project statement -->
+      <h3>Project Statement: Can You Fool AI?</h3>
 
       <h4>Introduction</h4>
 
       <p>
-        For our third project, we constructed a machine learning model that recognizes common objects through the use of Google Teachable Machine. In this project, the primary goal was to understand how machine learning operates and how training data impacts the predictions of the AI model. Specifically, we focused on two categories of objects: cups/glasses and phones. The reason for choosing such categories is that both are common objects that are easily accessible and available for photos.
+        For Project 3, we created BLINDSPOT, an interactive website where people can test an AI image classification model. We used Google Teachable Machine to train our AI to recognize two categories: Cup/Glass and Phone. People can test the model using their webcams and see how it responds to different objects. We wanted to see how our training pictures affected the AI's predictions and how it would respond to unfamiliar objects.
       </p>
 
       <p>
-        The core research question for our project was the following: is AI able to recognize an object it hasn't been trained to identify? In other words, does the model realize that the object is unknown or will it assign it to one of the categories we have created? This topic is relevant to Joy Buolamwini's Unmasking AI, where she discusses possible errors made by artificial intelligence because of its data and design process.
+        Our main research question was: What happens when an AI model sees an object outside its training categories? We were also interested in whether the model would give a high confidence score even when neither category was correct.
+      </p>
+
+      <p>
+        We chose cups, glasses, and phones because they were easy to find and photograph. This gave us enough pictures to train the model and more time to experiment with its predictions. Our project also connects to Joy Buolamwini's <em>Unmasking AI</em> and Judy Wajcman's <em>Feminist Theories of Technology</em>. Both readings made us think about how human decisions shape technology and how those decisions can affect its results.
       </p>
 
       <h4>Building and Training Our Model</h4>
 
       <p>
-        At first, we used Teachable Machine, a website developed by Google that enables people to create machine learning algorithms without having extensive coding skills. We chose image classification, since we needed to use a webcam to capture the objects recognized by the machine. Every group member provided his own images to the database.
+        We used Google Teachable Machine to create our AI model. The tool allowed us to upload our own pictures and train the model using the examples we collected. We started by creating two classes called Cup/Glass and Phone. Both of us collected original pictures using our webcams. We moved the objects around while taking pictures to capture different angles and distances. This gave the model more examples of what each object could look like.
       </p>
 
       <p>
-        Once we gathered all the images, we trained our model using Teachable Machine. After completing the process, we evaluated our model using the webcam preview option. The predictions of the model were displayed in two categories together with the confidence percentages. Lighting, angles and backgrounds might have influenced predictions of our model, since it had been trained on examples provided by us and not on how humans would understand the objects.
+        After collecting our pictures separately, we combined them into one Teachable Machine project. Our saved dataset contained 874 images in the Cup/Glass class and 1127 images in the Phone class, giving us 2001 images in total. Once the pictures were organized, we trained our model and tested it using the webcam preview. We could then see how the AI classified different objects and how confident it was in each prediction. For example, taking pictures of a phone from only one angle might make it harder for the model to recognize the same phone from another angle.
+      </p>
+
+      <h4>Building the Website</h4>
+
+      <p>
+        After training our model, we exported it using the TensorFlow.js option in Teachable Machine. We then created a new webpage called BLINDSPOT on our existing LIS 500 website. We used HTML and CSS to build the page and JavaScript to connect our trained model. We hosted the website through GitHub Pages so people could access and test it online.
       </p>
 
       <p>
-        Additionally, we created BLINDSPOT, which allows visitors to run our model through their webcam. There are several challenges on the website that invite people to try out various lighting, background and even unfamiliar objects.
+        We wanted people to be able to test our AI even if they had no experience with coding. Visitors can click Start Camera and show different objects to their webcams. The website displays the model's prediction and confidence percentages for Cup/Glass and Phone. We also added confidence bars so people can compare the results more easily.
+      </p>
+
+      <p>
+        We included a section called “Challenge the AI” where visitors can try different lighting conditions, distances, backgrounds, and unfamiliar objects. We also shared screenshots of our own tests so people could compare their results with ours. We wanted visitors to try the model for themselves and see whether they could find mistakes that we had not discovered during training.
       </p>
 
       <h4>Testing Our Model</h4>
 
       <p>
-        Since we trained the model, we were interested in its reaction to objects that did not belong to our two categories. Thus, we conducted three experiments using three unfamiliar objects, such as an orange ball, a water bottle, and a ceramic bowl.
+        After training our AI, we tested it using the webcam. We started with a cup, and the model correctly predicted Cup/Glass with 100% confidence. We then decided to test objects outside our training categories to see how the AI would respond. We chose an orange ball, a plastic water bottle, and a ceramic bowl because none of them belonged to our two categories.
+      </p>
+
+      <h5>Test 1: Orange Ball</h5>
+
+      <p>
+        For our first test, we held an orange ball in front of the camera. The model predicted Phone with 94% confidence and Cup/Glass with 6%. We expected the AI to have trouble recognizing the ball, but we were surprised that it classified the object as Phone with very high confidence. This made us question what the confidence score actually tells us about a prediction.
+      </p>
+
+      <h5>Test 2: Plastic Water Bottle</h5>
+
+      <p>
+        For our second test, we used a plastic water bottle. The model predicted Cup/Glass with 100% confidence and Phone with 0%. This result made more sense to us because bottles and cups are both used for drinking. However, we never created a separate category for bottles. We can't tell exactly why the model chose Cup/Glass, but it may have recognized visual patterns similar to those in our training pictures.
+      </p>
+
+      <h5>Test 3: Ceramic Bowl</h5>
+
+      <p>
+        For our third test, we showed the AI a ceramic bowl. The model predicted Phone with 79% confidence and Cup/Glass with 21%. This was probably our most surprising result because we expected the bowl to be classified as Cup/Glass. We thought the bowl looked more like a cup than a phone, but the AI predicted Phone instead. We can't explain the exact reason for this prediction based on one test. We would need to try more bowls and different camera angles to see whether the results stay consistent.
+      </p>
+
+      <h4>What Our Results Tell Us</h4>
+
+      <p>
+        Our tests showed us that the AI will still make a prediction even when an object does not belong to either of its training categories. Since we only trained our model to recognize Cup/Glass and Phone, it had no option to identify an unfamiliar object. This explains why the model classified an orange ball as Phone and a ceramic bowl as Phone, even though both answers were wrong.
       </p>
 
       <p>
-        Firstly, we used an orange ball as an object. The model classified it as a phone with 94% probability despite the fact that it does not have any features of a phone. Secondly, we used a plastic water bottle as an object, and the model classified it as a cup/glass with 100% probability. This result was reasonable since both a water bottle and a cup/glass are used for drinking but we did not include a water bottle in our categories. Finally, we used a ceramic bowl as an object, and the model classified it as a phone with 79% probability and as a cup/glass with 21%.
+        We also realized that confidence scores can be misleading. For example, the orange ball received a 94% confidence score for Phone, but this doesn't mean there was a 94% chance that the ball was actually a phone. The score only tells us how strongly the model chose one category over the other. This matters because people might see a high percentage and assume that the AI is accurate.
+      </p>
+
+      <!-- Connections to course readings -->
+      <h4>Connection to <em>Unmasking AI</em></h4>
+
+      <p>
+        Joy Buolamwini's <em>Unmasking AI</em> helped us think more about how human decisions affect the way AI systems work. Early in the book, Buolamwini describes her experience with the Aspire Mirror project. The software struggled to detect her face, but it could detect a white mask. This experience made her question why the technology worked differently depending on who was using it. Our project focuses on everyday objects, but we also saw how the decisions we made during development affected our model's predictions.
+      </p>
+
+      <h5>The Coded Gaze</h5>
+
+      <p>
+        Buolamwini introduces the idea of the “coded gaze,” which describes how developers' assumptions and priorities can affect technology. She explains that it involves "the priorities, preferences, and prejudices of those who have the power to shape technology" (Buolamwini).
       </p>
 
       <p>
-        These results showed us that our model does not recognize objects the same way people do. Instead, it compares what it sees with the examples from its training data. Since we only created two categories, the model had no option to identify something as unknown. One of our biggest discoveries was that a high confidence percentage does not necessarily mean a prediction is correct.
-      </p>
-
-      <h4>Connection to Unmasking AI</h4>
-
-      <p>
-        Another major connection between our project and Unmasking AI by Joy Buolamwini is the influence of human beings on the functioning of artificial intelligence. According to Buolamwini, there are instances when artificial intelligence does not operate correctly because of biased human decisions. The author illustrates how her face detection algorithm failed to detect her face and how it detected lighter skins better than darker. Such instances prove how poor representation of training data leads to inaccuracies in artificial intelligence algorithms.
+        This made us think about how much control we had when designing BLINDSPOT. We decided what the AI would recognize by choosing its training categories. We also selected the pictures used to train the model. The model didn't make these decisions on its own. For example, we could have included a third category called “Other,” but we only created Cup/Glass and Phone. This meant the AI had to choose between those two categories even when both answers were wrong.
       </p>
 
       <p>
-        While our project did not include facial detection and checking for racial and gender bias, we observed the same connection between training data and prediction. As our team decided which objects would be classified by the algorithm and how they would look like, we limited our model to detecting only cups/glasses and phones as two objects.
+        What interested us was that the model could work exactly as we designed it and still produce incorrect results. The issue was not necessarily a coding error because we had already limited the possible answers before training started. This made us realize that some AI problems can come from the decisions developers make, even when the model is working as intended.
+      </p>
+
+      <h5>Chapter 5: Defaults Are Not Neutral</h5>
+
+      <p>
+        In Chapter 5, Buolamwini discusses how early camera technology used standards that worked better for lighter skin. For example, the Shirley card originally used a white woman as the standard for adjusting film exposure. This caused problems when photographing people with darker skin. Buolamwini writes, “Default settings are not neutral” (Buolamwini).
       </p>
 
       <p>
-        Another significant insight gained from Unmasking AI is the notion of "coded gaze," whereby the bias of technology developers gets encoded into the system developed. The notion was essential in realizing the role played by our human decisions in relation to the use of AI. Classification of an orange ball as a phone by our model is one way in which our selection of category and example played a part in our classification.
+        This chapter made us think more about the pictures we used to train our model. All of our pictures were collected using our own webcams, so the model learned from the camera conditions we had at the time. For example, the lighting and background in our rooms might have affected what the AI learned about cups and phones.
       </p>
 
       <p>
-        It is clear that misclassifying a ball cannot compare to misidentification of people by facial recognition technology. Nevertheless, the limitations posed by our experiment became apparent once we realized why the limitations are critical when AI is being used in areas like employment and security. The work done by Buolamwini made us realize that developers had to think of the implications of their technology and test the systems outside their intended usage.
+        Looking back at our dataset, we realized that having a large number of pictures doesn't mean we included enough variety. Most of our images came from objects we already owned. For example, taking hundreds of pictures of the same cup might help the AI recognize that cup, but it doesn't guarantee that the model will recognize a glass with a different shape. This made us realize that we should pay more attention to what our training pictures actually represent instead of focusing mainly on how many pictures we collected.
+      </p>
+
+      <h5>Chapter 8: Power Shadows</h5>
+
+      <p>
+        In Chapter 8, Buolamwini discusses how researchers evaluate AI systems and why the results can be misleading when the testing data does not represent everyone. When examining benchmark datasets, she asks which groups were included and, “just as important, which groups were excluded?” (Buolamwini). Her research revealed that a model could receive a high overall accuracy score even when it performed poorly for certain groups.
+      </p>
+
+      <p>
+        Buolamwini's research also shows why intersectionality matters when evaluating AI. She found that some facial analysis systems performed much better for lighter-skinned men than darker-skinned women. Looking at race or gender separately would not fully show these differences. This also connects to implicit bias because developers may make assumptions without realizing it. In our project, we assumed that the pictures we collected would be enough to train the model, but we didn't think carefully about how much variety our dataset actually had. Unlike these systems, BLINDSPOT classifies objects rather than people, so we can't directly measure these types of discrimination in our project.
+      </p>
+
+      <p>
+        This made us question how we were measuring the success of our own model. When we tested BLINDSPOT, we mainly looked at the prediction and its confidence score. For example, when the AI classified a cup with 100% confidence, we considered it a successful result. However, we never calculated how often the model made correct predictions in all our tests. A high confidence score from one prediction doesn't tell us the model's overall accuracy.
+      </p>
+
+      <p>
+        Another issue is that we didn't use the same testing method. We tested different objects and observed their predictions, but we didn't record enough results to compare how often the model was correct for each category. A better approach would be to prepare a separate set of test images and record every prediction. We could then calculate how often the AI correctly identifies cups and phones.
+      </p>
+
+      <p>
+        Buolamwini's research also made us think about what happens when certain cases are left out of testing. If we only measure how well our AI recognizes cups and phones, we won't learn much about how it responds to unfamiliar objects. We think these results should be reported separately because they show different limitations of the model. This would give people a clearer understanding of what BLINDSPOT can actually do.
+      </p>
+
+      <h4>Connection to Judy Wajcman</h4>
+
+      <p>
+        Judy Wajcman's <em>Feminist Theories of Technology</em> discusses how technology can be shaped by the people who use it. She explains that technology is “also shaped or reconfigured at the multiple points of consumption and use” (149). Wajcman discusses how gender and social relationships shape technology, but her argument also made us think about the relationship between developers and users. This made us think about the feedback we received after sharing BLINDSPOT with our discussion group.
+      </p>
+
+      <p>
+        When we first created the website, we mainly focused on getting the model to work and allowing people to test different objects. However, our classmates approached the project differently. Some suggested testing the front and back of a phone, while others wanted to see how the model would respond to different types of glasses. These suggestions gave us ideas that we had not considered when developing the project.
+      </p>
+
+      <p>
+        Wajcman's argument helped us see that users can influence how technology develops. Our classmates' feedback showed us why it's important to consider how other people use the website instead of only thinking about our own experience.
       </p>
 
       <h4>What We Learned</h4>
 
       <p>
-        One of the lessons we learned is that machine learning relies greatly on training data. Previously, it was natural to think that AI can identify objects and answer correctly. However, after we built our model, it became evident that its capabilities depend on the amount of knowledge we provide. Although people can easily understand that a ball is neither a cup nor a phone, the model cannot distinguish between these objects because there is no unknown object category.
+        If we had the chance to do this project again, we would change how we planned our experiments. We spent most of our time collecting pictures and getting the model to work. Looking back, we should have decided how to test its accuracy before training it. This would have helped us compare our results more carefully instead of relying on a few examples.
       </p>
 
       <p>
-        Another lesson we learned is that AI has to be tested in various conditions. Had we used only cups and phones for testing, we could be sure about how well our model works. It turned out that it is important to test unfamiliar objects to discover some errors we did not notice before. The percentages of confidence can be deceiving as well. For example, although the prediction looks very convincing and has 100% confidence, it does not mean that it is right; maybe, the model just picks the nearest category.
+        We also think adding a third category called “Other” would be worth trying. We could train it using objects that are neither cups nor phones, then compare the new model with our original version. This would help us see whether adding another category actually improves the predictions. However, we can't assume it would solve every problem.
       </p>
 
       <h4>Conclusion</h4>
 
       <p>
-        In general, the whole project was helpful in terms of increasing our awareness of the process of machine learning and the impact of humans on the predictions of AI algorithms. Through creating an algorithm to recognize cups, glasses, and phones, we have learned how computers work with different samples and examples to produce predictions and what mistakes could arise from that.
+        At first, we mainly wanted to create a model that could recognize cups and phones. As we continued testing, we became more interested in its mistakes and what caused them. We found that getting the AI to work was only part of the project. We also needed to question how reliable its predictions were.
       </p>
 
       <p>
-        Considering the connection of our project to Unmasking AI project, we have gained an understanding of why it is important to know about the mentioned limitations outside the classroom experiment. Buolamwini shows that issues that may appear in the work of AI algorithms can lead to much bigger problems as far as they may influence people. The main conclusion we were able to draw from this experience is that we should not blindly rely on the predictions produced by AI because of their confidence. We have to know how such algorithms work and what problems may arise in their work.
+        The course readings helped us look at our project from different perspectives. Buolamwini's work showed us why the design and evaluation of AI systems matter, and Wajcman's article made us think about how users can influence technology. Our project is much simpler than the issues discussed in these readings, but it gave us a chance to apply their ideas to something we created ourselves.
       </p>
 
+      <p>
+        In the end, we learned that building a working AI model doesn't mean building a reliable one. We need to pay attention to its limitations and be careful about the conclusions we draw from its predictions.
+      </p>
+      <!-- MLA references for course readings -->
+      <h4>Works Cited</h4>
+
+      <p>
+        Buolamwini, Joy. <em>Unmasking AI: My Mission to Protect What Is Human in a World of Machines</em>. Random House, 2023.
+      </p>
+
+      <p>
+        Wajcman, Judy. “Feminist Theories of Technology.” <em>Cambridge Journal of Economics</em>, vol. 34, no. 1, 2010, pp. 143–152. <a href="https://doi.org/10.1093/cje/ben057">https://doi.org/10.1093/cje/ben057</a>.
+      </p>
     </section>
 
   </main>
